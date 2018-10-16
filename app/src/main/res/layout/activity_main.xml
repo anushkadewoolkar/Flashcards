@@ -7,21 +7,75 @@
     tools:context=".MainActivity"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/flashcard_question"
         android:text="Who wrote the Harry Potter series?"
         android:textSize="40sp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:background="@drawable/card_background"
+        android:elevation="5dp"/>
+
 
     <TextView
-        android:id="@+id/flashcard_answer"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:visibility="invisible"
-        android:layout_alignParentStart="true"
+        android:id="@+id/flashcard_answer1"
+
+        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/flashcard_question"
+        android:text="Danielle Steel"
+        android:textSize="30sp"
+        android:background="@drawable/card_background2"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/flashcard_answer2"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/flashcard_answer1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_background2"
         android:gravity="center"
         android:text="JK Rowling"
-        android:textSize="40sp" />
+        android:textSize="30sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/flashcard_answer3"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/flashcard_answer2"
+        android:background="@drawable/card_background2"
+        android:gravity="center"
+        android:text="Agatha Christie"
+        android:textSize="30sp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/visibilityoff"
+        android:layout_below="@+id/flashcard_answer3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/eyeoff"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/visibilityon"
+        android:layout_below="@+id/flashcard_answer3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/eyeon"/>
 
 </RelativeLayout>
