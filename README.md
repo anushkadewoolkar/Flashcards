@@ -7,7 +7,7 @@ Flashcard App!
 
 ### App Walk-though
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="/cardistry.gif3" width=200><br>
 
 ## Required
 - [x] User can create a card and still see their created card when the app is relaunched.
@@ -24,7 +24,7 @@ Flashcard App!
 
 ### App Walk-though
 
-<img src="/cardistry.gif" width=200><br>
+<img src="/cardistry.gif2" width=200><br>
 
 
 ## Required
@@ -44,7 +44,7 @@ Flashcard App!
 ## Lab 1
 
 ### App Walk-though
- <img src="/cardistry.gif" width=200><br>
+ <img src="/cardistry1.gif" width=200><br>
  
 ## Required
 - [x] Create New Project in Android Studio
