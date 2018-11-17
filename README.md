@@ -7,7 +7,7 @@ Flashcard App!
 
 ### App Walk-though
 
-<img src="/cardistry.gif3" width=200><br>
+<img src="/cardistry3.gif" width=200><br>
 
 ## Required
 - [x] User can create a card and still see their created card when the app is relaunched.
@@ -24,7 +24,7 @@ Flashcard App!
 
 ### App Walk-though
 
-<img src="/cardistry.gif2" width=200><br>
+<img src="/cardistry2.gif" width=200><br>
 
 
 ## Required
