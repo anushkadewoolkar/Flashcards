@@ -50,6 +50,7 @@ public class addflashcard extends AppCompatActivity {
                     data.putExtra("answer1", ((EditText) findViewById(R.id.answer1)).getText().toString());
                     data.putExtra("answer2", ((EditText) findViewById(R.id.answer2)).getText().toString());
                     data.putExtra("answer3", ((EditText) findViewById(R.id.answer3)).getText().toString());
+                    data.putExtra("edit", getIntent().getStringExtra("edit"));
                     setResult(RESULT_OK, data);
                     finish();
                 }
