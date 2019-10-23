@@ -13,6 +13,8 @@ import android.widget.TextView;
 import java.util.List;
 import java.util.Random;
 
+//
+
 public class MainActivity extends AppCompatActivity {
 
     FlashcardDatabase flashcardDatabase;
