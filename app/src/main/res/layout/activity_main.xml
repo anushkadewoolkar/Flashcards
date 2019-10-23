@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/RelativeLayout"
-    android:background="@color/blue">
+    android:background="@drawable/sea">
 
     <TextView
         android:id="@+id/flashcard_question"
@@ -18,7 +18,7 @@
         android:background="@drawable/card_background"
         android:elevation="5dp"
         android:gravity="center"
-        android:text="Who wrote the Harry Potter series?"
+        android:text="Create card by clicking plus button"
         android:textSize="40sp" />
 
 
@@ -31,42 +31,16 @@
         android:gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/flashcard_question"
-        android:text="Danielle Steel"
+        android:text="Answer"
         android:textSize="30sp"
         android:background="@drawable/card_background2"
-        android:visibility="invisible"/>
-
-    <TextView
-        android:id="@+id/flashcard_answer2"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/flashcard_answer1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/card_background2"
-        android:gravity="center"
-        android:text="JK Rowling"
-        android:textSize="30sp"
-        android:visibility="invisible"/>
-
-    <TextView
-        android:id="@+id/flashcard_answer3"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/flashcard_answer2"
-        android:background="@drawable/card_background2"
-        android:gravity="center"
-        android:text="Agatha Christie"
-        android:textSize="30sp"
         android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/visibilityoff"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/flashcard_answer3"
+        android:layout_below="@id/flashcard_answer1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="69dp"
         android:src="@drawable/eyeoff"
@@ -76,22 +50,10 @@
         android:id="@+id/visibilityon"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/flashcard_answer3"
+        android:layout_below="@id/flashcard_answer1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="69dp"
         android:src="@drawable/eyeon" />
-
-
-
-    <ImageView
-        android:id="@+id/plus"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_iconmonstr_plus_circle_thin" />
 
 
     <ImageView

@@ -19,13 +19,9 @@ public class addflashcard extends AppCompatActivity {
         if (getIntent().getStringExtra("question") != null) {
             String question = getIntent().getStringExtra("question");
             String answer1 = getIntent().getStringExtra("answer1");
-            String answer2 = getIntent().getStringExtra("answer2");
-            String answer3 = getIntent().getStringExtra("answer3");
 
             ((EditText) findViewById(R.id.question)).setText(question);
             ((EditText) findViewById(R.id.answer1)).setText(answer1);
-            ((EditText) findViewById(R.id.answer2)).setText(answer2);
-            ((EditText) findViewById(R.id.answer3)).setText(answer3);
         }
 
         findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
@@ -39,17 +35,13 @@ public class addflashcard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (((EditText) findViewById(R.id.question)).getText().toString().equals("") ||
-                    ((EditText) findViewById(R.id.answer1)).getText().toString().equals("") ||
-                    ((EditText) findViewById(R.id.answer2)).getText().toString().equals("") ||
-                    ((EditText) findViewById(R.id.answer3)).getText().toString().equals("") ){
+                    ((EditText) findViewById(R.id.answer1)).getText().toString().equals("")){
                     Toast.makeText(getApplicationContext(), "Please fill all fields", Toast.LENGTH_LONG).show();
                 }else {
                     Intent data = new Intent();
 
                     data.putExtra("question", ((EditText) findViewById(R.id.question)).getText().toString());
                     data.putExtra("answer1", ((EditText) findViewById(R.id.answer1)).getText().toString());
-                    data.putExtra("answer2", ((EditText) findViewById(R.id.answer2)).getText().toString());
-                    data.putExtra("answer3", ((EditText) findViewById(R.id.answer3)).getText().toString());
                     data.putExtra("edit", getIntent().getStringExtra("edit"));
                     setResult(RESULT_OK, data);
                     finish();

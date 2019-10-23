@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".addflashcard"
-    android:background="@color/yellow">
+    android:background="@drawable/sea">
 
     <ImageView
         android:id="@+id/cancel"
@@ -46,27 +46,5 @@
         android:hint="Enter answer here"
         android:inputType="textPersonName"
         android:background="@color/lime"/>
-
-    <EditText
-        android:id="@+id/answer2"
-        android:layout_width="325dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/answer1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:hint="Enter wrong answer here"
-        android:inputType="textPersonName"
-        android:background="@color/silver"/>
-
-    <EditText
-        android:id="@+id/answer3"
-        android:layout_width="325dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/answer2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:hint="Enter wrong answer here"
-        android:inputType="textPersonName"
-        android:background="@color/silver" />
 
 </RelativeLayout>
