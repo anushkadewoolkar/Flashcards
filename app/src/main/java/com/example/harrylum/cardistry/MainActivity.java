@@ -13,8 +13,6 @@ import android.widget.TextView;
 import java.util.List;
 import java.util.Random;
 
-//
-
 public class MainActivity extends AppCompatActivity {
 
     FlashcardDatabase flashcardDatabase;
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_main);
 
         flashcardDatabase = new FlashcardDatabase(getApplicationContext());
         allFlashcards = flashcardDatabase.getAllCards();
@@ -42,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.flashcard_answer1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.setBackground(getDrawable(R.drawable.card_backgroundy));
+                v.setBackground(getResources().getDrawable(R.drawable.card_backgroundy));
 
             }
         });
+
         findViewById(R.id.visibilityoff).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.flashcard_answer1).setVisibility(View.VISIBLE);
                 v.setVisibility(View.INVISIBLE);
                 findViewById(R.id.visibilityoff).setVisibility(View.VISIBLE);
+            }
+        });
+
+        findViewById(R.id.plus).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, addflashcard.class);
+                MainActivity.this.startActivityForResult(intent,100);
             }
         });
 
@@ -85,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
                     // set the question and answer TextViews with data from the database
                     int rand = getRandomNumber(0, allFlashcards.size() - 1);
                     ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(rand).getQuestion());
-                    ((TextView) findViewById(R.id.flashcard_answer1)).setText(allFlashcards.get(rand).getAnswer());;
-                }
+                    ((TextView) findViewById(R.id.flashcard_answer1)).setText(allFlashcards.get(rand).getAnswer());
+                    }
             }
         });
 
@@ -115,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
 
                 String question = data.getExtras().getString("question"); // 'string1' needs to match the key we used when we put the string in the Intent
                 String answer1 = data.getExtras().getString("answer1");
+                String answer2 = data.getExtras().getString("answer2");
+                String answer3 = data.getExtras().getString("answer3");
 
                 if (data.getExtras().getString("edit") != null) {
                     flashcardDatabase.deleteCard(((TextView) findViewById(R.id.flashcard_question)).getText().toString());
